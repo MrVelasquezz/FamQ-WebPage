@@ -2,6 +2,7 @@
     session_start();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,27 +13,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
-    <?php
-        if(isset($_SESSION['pass'])){
-           echo '<style>.del{visibility: visible;}</style>';
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
         }
-    ?>
+
+        #login {
+            height: 400px;
+            width: 300px;
+        }
+    </style>
     <title>Anonym Comments</title>
 </head>
 
+<body class="d-flex justify-content-center align-items-center">
 <?php
-    $req = '';
-    $req = $_REQUEST['page'];
-    if(!empty($req) && $req == 'comments'){
-        require 'pages/comments.php';
+    if(!isset($_SESSION['pass'])){
+        require "admin/notLoged.php";
     }
-    elseif(!empty($req) && $req == 'voting'){
-        require 'pages/voting.php';
+    else{
+        require "admin/loged.php";
     }
-    if(isset($_SESSION['pass'])){
-        echo '<script src="scripts/delPost.js"></script>';
-     }
 ?>
+    
+</body>
 
 </html>
