@@ -4,7 +4,7 @@
     $data = '';
     $data = $_POST['comm'];
 
-    if(!empty($data)){
+    if(!empty($data) && strlen($data) >= 5){
 
         $conn = new mysqli($server, $uname, $pass, $dbname);
 
