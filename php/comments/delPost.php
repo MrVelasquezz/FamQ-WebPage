@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    require 'config.php';
+    require '../config.php';
 
     $id = '';
     $id = $_POST['id'];

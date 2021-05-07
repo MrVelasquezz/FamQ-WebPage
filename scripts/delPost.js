@@ -8,7 +8,7 @@ class delElement{
         if(conf == true){
             $.ajax({
                 type: "post",
-                url: "php/delPost.php",
+                url: "php/comments/delPost.php",
                 data: {id : this.id},
                 success: function (data) {
                     console.log(data);

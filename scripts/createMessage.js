@@ -32,7 +32,7 @@ $(document).ready(function () {
     }
     $.ajax({
         type: "POST",
-        url: "php/request.php",
+        url: "php/comments/request.php",
         dataType: "text",
         success(data) {
             if (data.length > 0) {

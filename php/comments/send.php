@@ -1,11 +1,11 @@
 <?php
-    require 'config.php';
+    require '../config.php';
 
     $data = '';
     $data = $_POST['comm'];
 
     if(!empty($data) && strlen($data) >= 5){
-
+        
         $conn = new mysqli($server, $uname, $pass, $dbname);
 
         if($conn->connect_error){
