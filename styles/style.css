@@ -47,3 +47,11 @@ span#logo, span#logo span{
     height: 400px;
     width: 300px;
 }
+.empty{
+    font-size: 32px;
+    opacity: 0.5;
+}
+
+.votePost div, .votePost strong{
+    padding: 0 5px;
+}

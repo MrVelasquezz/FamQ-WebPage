@@ -1,5 +1,5 @@
 <body>
-    <section class="container mx-auto d-flex flex-column border border-bottom-0 border-top-0 h-100 py-4">
+    <section class="container mx-auto d-flex flex-column border border-dark border-bottom-0 border-top-0 h-100 py-4">
         <?php
             if(isset($_SESSION['pass'])){
                 echo '<strong class="text-center text-danger">Admin</strong>';

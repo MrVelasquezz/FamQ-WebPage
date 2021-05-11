@@ -16,11 +16,20 @@
     elseif(!empty($_REQUEST['page'])){
         $req = '';
         $req = $_REQUEST['page'];
-        if(!empty($req) && $req == 'comments'){
+        if($req == 'comments'){
             require 'pages/comments.php';
         }
-        elseif(!empty($req) && $req == 'voting'){
+        elseif($req == 'voting'){
             require 'pages/voting.php';
+        }
+        elseif($req == 'createVoting'){
+            require 'pages/createVoting.php';
+        }
+        elseif($req == 'results'){
+            require 'pages/ready.php'; 
+        }
+        else{
+            require 'pages/empty.php';
         }
     }
     //! adds opportunity for admin to delete messeges 

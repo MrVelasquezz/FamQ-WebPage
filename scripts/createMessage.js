@@ -31,9 +31,9 @@ $(document).ready(function () {
         }
     }
     $.ajax({
-        type: "POST",
+        type: "post",
         url: "php/comments/request.php",
-        dataType: "text",
+        data: "data",
         success(data) {
             if (data.length > 0) {
                 rdata = JSON.parse(data);
